@@ -1,4 +1,4 @@
-name: Deploy BTM application to RDCD VM
+name: Deploy ERP to RDCD VM
 
 # Trigger the workflow on push and
 # pull request events on the production branch
@@ -25,4 +25,4 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           #password: ${{ secrets.PASSWORD }}
-          script: "cd /var/www/html/btm.rdcd.orangebd.com && git pull origin main && chmod +x ./.scripts/deploy.sh && sh ./.scripts/deploy.sh"
+          script: "cd /var/www/html/erp.rdcd.orangebd.com && git pull origin main && chmod +x ./.scripts/deploy.sh && sh ./.scripts/deploy.sh"
