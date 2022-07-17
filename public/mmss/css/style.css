@@ -1,0 +1,10 @@
+.prescription {}
+.prescription ul.information {
+    list-style: none;
+}
+.prescription ul.information li {
+    margin: 15px 0;
+}
+.prescription ul.information li label{}
+.prescription ul.information li input{}
+/*.prescription ul.information li input{}*/

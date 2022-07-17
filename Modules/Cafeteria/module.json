@@ -1,0 +1,14 @@
+{
+    "name": "Cafeteria",
+    "alias": "cafeteria",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Cafeteria\\Providers\\CafeteriaServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

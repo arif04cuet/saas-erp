@@ -1,0 +1,156 @@
+<?php
+return [
+    'create' => 'Create Pension',
+    'title' => 'Pension',
+    'index' => 'Pension List',
+
+    'lump_sum' => [
+        'create' => 'Create Lump Sum',
+        'title' => 'Lump Sum',
+        'index' => 'Lump Sum List',
+        'form' => 'Lump Sum Form',
+        'bill' => 'Download Lump Sum Bill',
+        'form_elements' => [
+            'employee' => 'Employee',
+            'basic_salary' => 'Basic Salary',
+            'eligible_pension' => 'Eligible For Pension',
+            'monthly_pension' => 'Monthly Pension',
+            'lump_sum' => 'Lump Sum',
+            'total_lump_sum' => 'Total Lump Sum',
+            'status' => 'Status',
+            'disbursed' => 'Disbursed',
+            'receiver' => 'Receiver',
+        ],
+        'mark_as_disbursed' => 'Mark as disbursed',
+        'status' => [
+            'draft' => 'Draft',
+            'disbursed' => 'Disbursed',
+        ],
+        'deduction' => [
+            'title' => 'Deduction',
+            'form_elements' => [
+                'title' => 'Title',
+                'code' => 'Code',
+                'amount' => 'Amount',
+                'remark' => 'Remark',
+            ],
+        ]
+    ],
+    'deduction' => [
+        'title' => 'Pension Deduction',
+        'create' => 'Create Pension Deduction',
+        'index' => 'Pension Deduction List',
+        'form' => 'Pension Deduction Form',
+        'form_elements' => [
+            'name' => 'Name',
+            'bangla_name' => 'Bangla Name',
+            'description' => 'Description',
+        ],
+    ],
+    'monthly' => [
+        'create' => 'Create Monthly Pension',
+        'title' => 'Monthly Pension',
+        'form' => 'Monthly Pension Form',
+        'index' => 'Monthly Pension Index',
+        'list' => 'Monthly Pension List',
+        'basic' => 'Basic',
+        'medical' => 'Medical Allowance',
+        'bonus' => 'Bonus',
+        'adjustment' => 'Adjustment (Deduction)',
+        'bonus_if_any' => 'Bonus (If Any)',
+        'no_employee_selected' => 'No Employee Selected! Please Load Employee List and Select at Least 1',
+        'disburse' => 'Disburse',
+        'disburse_date' => 'Disburse Date',
+        'monthly_pension_record' => 'Monthly Pension Record',
+        'monthly_pension_records' => 'All Monthly Pension Records',
+        'download_bill' => 'Download Monthly Pension Bill',
+        'bill_receivable' => 'Bill Receivable',
+        'no_bill' => 'No bill found to claim',
+        'bonus_only' => 'Only Bonus',
+        'only_bonus_error' => 'You need to select at least one bonus when Only Bonus is checked',
+        'select_month' => 'Please Pick Pension Month'
+    ],
+    'contract' => [
+        'create' => 'Create Monthly Pension Contract',
+        'title' => 'Pension Contract',
+        'form' => 'Monthly Pension Contract Form',
+        'index' => '',
+        'list' => 'Monthly Pension Contract List',
+        'initial_basic' => 'Initial Basic',
+        'current_basic' => 'Current Basic',
+        'receiver' => 'Pension Receiver',
+        'receiver_age' => 'Receiver Age',
+        'increment_percentage' => 'Percentage of Increment (%)',
+        'disburse_type' => 'Disbursement Type',
+        'bank_account_info' => 'Bank Account Information',
+        'bank' => 'Bank',
+        'cash' => 'Cash',
+        'ppo_no' => 'PPO No.',
+        'has_payroll_increment' => 'Has Increment?',
+    ],
+
+    'configuration' => [
+        'create' => 'Create Pension Configuration',
+        'title' => 'Pension Configuration',
+        'short_title' => 'Configuration',
+        'index' => 'Pension Configuration List',
+        'form' => 'Pension Configuration List',
+        'error_message' => 'Pension Configuration Not Found',
+        'form_elements' => [
+            'title' => 'Title',
+            'percentage' => 'Pension Percentage',
+            'lump_sum_number' => 'Lump Sum Number',
+            'lump_sum_percentage' => 'Lump Sum Percentage',
+            'monthly_pension_percentage' => 'Monthly Pension Percentage',
+            'minimum_pension_amount' => 'Minimum Pension Amount',
+            'medical_allowance_increment_age' => 'Medical Increment Age',
+            'medical_allowance_after_increment' => 'Medical Allowance (After Increment)',
+            'initial_medical_allowance' => 'Initial Medical Allowance',
+            'status' => [
+                'active' => 'Active',
+                'inactive' => 'Inactive',
+            ]
+        ],
+    ],
+
+    'rule' => [
+        'create' => 'Create Pension Rule',
+        'title' => 'Pension Rule',
+        'short_title' => 'Rule',
+        'index' => 'Pension Rule List',
+        'form' => 'Pension Rule Form',
+        'error_message' => 'Pension Rule Not Found',
+        'form_elements' => [
+            'name' => 'Name',
+            'type' => 'Type',
+            'condition' => 'Condition',
+            'amount_type' => 'Amount Type',
+            'percentage_amount' => 'Percentage(Basic)',
+            'fixed_amount' => 'Fixed Amount',
+        ],
+    ],
+
+    'report' => [
+        'title' => 'Pension Report',
+        'sonali_bank_acc_no' => 'Sonali Bank Kotbari Branch Acc No.',
+        'tk' => 'Taka',
+        'report_headline' => 'Employee Pension List for the Month :month'
+    ],
+
+    'nominee' => [
+        'title' => 'Pension Nominees',
+        'form' => 'Pension Nominee Form',
+        'list' => 'Pension Nominee List',
+        'show' => 'Show Pension Nominee',
+        'add' => 'Create Pension Nominee',
+        'employee_details' => 'Employee Details',
+        'nominee_details' => 'Nominee Details',
+        'nominee_name' => 'Nominee Name (accord. NID/BRC)',
+        'birth_date' => 'Nominee Birth date',
+        'relation' => 'Relation with the Employee',
+        'age_limit' => 'Age Limit',
+        'nominee' => 'Nominee',
+        'self' => 'Self',
+        'age_limit_message'=>'For Lifetime pension, leave the space blank'
+    ]
+];

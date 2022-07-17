@@ -1,0 +1,583 @@
+i {
+    color: #7777cd !important;
+}
+
+.btn.custombtnbg {
+    background-color: #2c8c17 !important;
+}
+
+.site-color {
+    color: #006f52 !important;
+}
+
+.f-16 {
+    font-size: 16px !important;
+}
+
+.pt-5p {
+    padding-top: 5px;
+}
+
+.cmt-3 {
+    margin-top: 3px !important;
+}
+
+.header-navbar .navbar-header .navbar-brand .brand-logo {
+    width: 210px !important;
+}
+
+a.navbar-brand h3.brand-text,
+#navbar-mobile ul li.nav-item a.nav-link {
+    color: #000 !important;
+    opacity: 0.95;
+    transition: color .3s;
+    font-size: 14px;
+}
+
+#navbar-mobile ul li.nav-item a.nav-link:hover {
+    color: #111111 !important;
+}
+
+.login-page .card {
+    padding: 25px 15px 15px 15px;
+}
+
+.login-page .card-title h3 {
+    padding: 15px 0 10px 0;
+}
+
+.login-page {
+    min-height: calc(100vh - 170px);
+}
+
+.login-card {
+    max-width: 400px;
+    margin: auto !important;
+}
+
+.card .card-body .dataTables_wrapper table {
+    font-size: 14px !important;
+}
+
+.navigation {
+    font-size: 1rem !important;
+}
+
+/****** DashBoard *********/
+div.card-body.module-wrap h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff !important
+}
+
+div.card-body.module-wrap h6 a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #800000 !important
+}
+
+/*************btn style ****************/
+.bg-success,
+.btn.btn-primary,
+.btn-primary,
+.btn-info {
+    border-color: #008000 !important;
+    background-color: #008000 !important;
+}
+
+.btn.btn-warning i,
+.btn.btn-primary i,
+.btn-primary i,
+.btn-info i {
+    color: #fff !important;
+}
+
+.btn.btn-primary.customabtn,
+.btn-primary.customabtn,
+.btn-info.customabtn {
+    background-color: transparent !important;
+    border: 0px !important;
+    display: block;
+    margin-right: 0px !important;
+}
+
+.btn.btn-primary.customabtn:hover,
+.btn-primary.customabtn:hover,
+.btn-info.customabtn:hover {
+    background-color: transparent !important;
+    border: 0px !important
+}
+
+.btn-info.customabtn i {
+    margin-right: 0px !important;
+    font-size: 35px;
+    color: #2c8c17 !important;
+}
+
+.btn-info.customabtn i:hover {
+    color: #7777cd !important;
+}
+
+.columnvmiddle {
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+/* .btn.btn-primary:active,
+.btn.btn-primary:focus,
+.btn.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-info:active,
+.btn-info:focus,
+.btn-info:hover {
+    border-color: #28D094 !important;
+    background-color: #28D094 !important;
+} */
+
+.btn-outline-primary {
+    border-color: #28D094 !important;
+    color: #28D094 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #28D094 !important;
+}
+
+.btn.btn-warning {
+    border-color: #d32f2f !important;
+    background-color: #d32f2f !important;
+    color: #FFFFFF;
+}
+
+.btn-warning:hover {
+    border-color: #aa2d2d !important;
+    background-color: #aa2d2d !important;
+    color: #FFFFFF;
+}
+
+/**/
+.navbar-light .navbar-toggler-icon {
+    background-image: url("/images/menu.svg") !important;
+}
+
+.navbar-light .navbar-toggler {
+    color: #ffffff;
+    border-color: rgb(255, 255, 255) !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #ffffff;
+}
+
+.mt-27vh {
+    margin-top: 27vh;
+}
+
+#user-list {
+    /* margin-top: 30px; */
+    margin-top: 0px;
+}
+
+#user-list .card-title {
+    margin-top: 0px;
+}
+
+.page-item.active .page-link {
+    background-color: #2c8c17;
+    border-color: #2c8c17;
+}
+
+/***************/
+table thead tr th {
+    border-bottom: none !important;
+}
+
+table tr th.sorting_1 {
+    max-width: 100px;
+}
+
+/**** Setting Form Heading CSS ****/
+.card .card-header h4.form-section {
+    color: #2C303B;
+    /* line-height: 3rem;
+    margin-bottom: 20px; */
+    border-bottom: 1px solid #2C303B;
+}
+
+.card .card-body.preduce {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+}
+
+/****** Training Type Style ******/
+form .form-actions {
+    border-top: 0px solid #d1d5ea !important;
+    /* padding: 10px 0 !important; */
+    margin-top: 0px !important;
+    margin-right: 0px !important;
+}
+
+form>fieldset {
+    border: 1px solid !important;
+    padding: 50px 20px !important;
+}
+
+span.custom-inline-menu {
+    min-width: 150px !important;
+    text-align: center;
+}
+
+span.custom-inline-menu a {
+    display: inline !important;
+    padding: 3px 5px !important;
+}
+
+span.custom-inline-menu a i {
+    font-size: 20px !important;
+}
+
+span.custom-inline-menu a i:hover {
+    background-color: none !important;
+}
+
+.button-wrap {
+    float: right;
+}
+
+.button-wrap a {
+    margin-left: 5px;
+}
+
+/****** MULTI STEP FORM ******/
+.app-content .wizard>.steps>ul>li.current .step {
+    border-color: #2c8c17 !important;
+    color: #2c8c17 !important;
+}
+
+.app-content .wizard>.actions>ul>li>a[href="#next"] {
+    background: #2c8c17 !important;
+}
+
+.app-content .wizard>.steps>ul>li.done .step {
+    background-color: #2c8c17 !important;
+    border-color: #2c8c17 !important;
+}
+
+.app-content .wizard>.actions>ul>li>a[href="#finish"] {
+    background-color: #2c8c17 !important;
+}
+
+.select2-container--classic .select2-results__options .select2-results__option[aria-selected=true],
+.select2-container--default .select2-results__options .select2-results__option[aria-selected=true] {
+    background-color: #2c8c17 !important;
+}
+
+.repeater-room-infos .btn-outline-danger {
+    margin-top: 6px;
+    font-size: 26px;
+    padding: 4px 9px 2px 9px;
+}
+
+#add_more_room {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.app-content .wizard>.actions>ul>li>a {
+    padding: 1px 35px !important;
+}
+
+.btn-amber.btn-accent-4 {
+    border-color: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #000 !important;
+}
+
+.btn-amber.btn-accent-4:hover {
+    border-color: #005f45 !important;
+    background-color: #005f45 !important;
+    color: #fff !important;
+}
+
+.content-body .btn-amber.btn-accent-4 {
+    margin-left: 20px;
+}
+
+/*****/
+#card-footer-options .card-details-body {
+    box-shadow: inset 0 5px 6px 0 rgba(0, 0, 0, 0.1);
+    padding: 25px 10px 10px 10px;
+}
+
+.job-post-details {
+    border-top: 1px solid #000;
+    margin-top: 5px;
+    padding-top: 25px;
+}
+
+.job-summary-title {
+    padding: 19px;
+}
+
+.job-summary-title {
+    background-color: rgba(0, 111, 82, 0.74) !important;
+}
+
+/******panel style****/
+.panel-primary>.panel-heading {
+    background-color: #2c8c17 !important;
+    border-color: #2c8c17 !important;
+}
+
+/********** Avata upload **********/
+.photoupload-label {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0 20px;
+}
+
+.avatar-upload .avatar-edit {
+    right: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0;
+}
+
+.avatar-upload .avatar-edit input+label:after {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0;
+    content: " " !important;
+}
+
+.avatar-upload .avatar-edit input+label:before {
+    content: "⇪";
+    font-family: 'FontAwesome';
+    color: #757575;
+    position: absolute;
+    top: calc(50% - 17px);
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto auto 0 auto;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    background: #FFFFFF;
+    padding: 7px 0 0 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.avatar-upload .avatar-edit input+label {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.avatar-upload {
+    margin: 25px auto !important;
+}
+
+.signature-upload {
+    max-width: 300px !important;
+}
+
+.signature-upload {
+    margin-top: 80px !important;
+}
+
+.app-content .wizard.wizard-circle>.steps>ul>li:before,
+.app-content .wizard.wizard-circle>.steps>ul>li:after {
+    background-color: #006f52 !important;
+}
+
+.app-content .wizard.wizard-circle>.steps>ul>li.current~li:after,
+.app-content .wizard.wizard-circle>.steps>ul>li.current~li:before,
+.app-content .wizard.wizard-circle>.steps>ul>li.current:after {
+    background-color: #F4F5FA !important;
+}
+
+.training-photo.avatar-upload {
+    max-width: 300px !important;
+    margin: 0px !important
+}
+
+.training-photo.avatar-upload .avatar-preview {
+    width: 300px !important;
+    height: 300px !important;
+}
+
+.course-photo.avatar-upload {
+    max-width: 300px !important;
+}
+
+.course-photo.avatar-upload .avatar-preview {
+    width: 200px !important;
+    height: 200px !important;
+}
+
+/************** Training Course CSS *******************/
+form.course-custom-textarea textarea {
+    width: auto;
+    height: 135px !important;
+}
+
+.card.course-create .card-header h4.card-title {
+    font-size: 20px !important;
+    margin-bottom: 6px;
+}
+
+.card.course-create .card-header h6.card-title {
+    font-size: 16px !important;
+}
+
+.card.training-process-tab ul.nav.nav-tabs,
+.card.course-process-tab ul.nav.nav-tabs,
+.card.course-edit-process-tab ul.nav.nav-tabs,
+.card.trainee-create-process-tab ul.nav.nav-tabs {
+    /* border: 1px solid #7777cd !important; */
+}
+
+.card.training-process-tab ul.nav.nav-tabs li,
+.card.course-process-tab ul.nav.nav-tabs li,
+.card.course-edit-process-tab ul.nav.nav-tabs li,
+.card.trainee-create-process-tab ul.nav.nav-tabs li {
+    background-color: #7777cd !important;
+    border:1px solid #ddd;
+    /* margin: 5px;
+    border-radius: 5px; */
+}
+
+.card.course-process-tab ul.nav.nav-tabs li:hover {
+    background: #1d771d !important;
+}
+
+.card.training-process-tab ul.nav.nav-tabs li.nav-item a,
+.card.course-process-tab ul.nav.nav-tabs li.nav-item a,
+.card.course-edit-process-tab ul.nav.nav-tabs li.nav-item a,
+.card.trainee-create-process-tab ul.nav.nav-tabs li.nav-item a {
+    color: #fff !important;
+}
+
+.card.training-process-tab ul.nav.nav-tabs li.nav-item a i,
+.card.course-process-tab ul.nav.nav-tabs li.nav-item a i,
+.card.course-edit-process-tab ul.nav.nav-tabs li.nav-item a i,
+.card.trainee-create-process-tab ul.nav.nav-tabs li.nav-item a i {
+    color: #fff !important;
+    font-size: 16px !important;
+}
+
+.card.training-process-tab ul.nav.nav-tabs li.nav-item a.nav-link,
+.card.course-process-tab ul.nav.nav-tabs li.nav-item a.nav-link,
+.card.course-edit-process-tab ul.nav.nav-tabs li.nav-item a.nav-link,
+.card.trainee-create-process-tab ul.nav.nav-tabs li.nav-item a.nav-link {
+    padding: 0px 17px!important;
+}
+
+.card.training-process-tab ul.nav.nav-tabs li.nav-item a.nav-link i,
+.card.course-process-tab ul.nav.nav-tabs li.nav-item a.nav-link i,
+.card.course-edit-process-tab ul.nav.nav-tabs li.nav-item a.nav-link i,
+.card.trainee-create-process-tab ul.nav.nav-tabs li.nav-item a.nav-link i {
+    color: #fff !important;
+    margin-right: 0px !important
+}
+
+.nav.nav-tabs.nav-underline .nav-item a.nav-link.active {
+    background-color: #008000 !important;
+    border-radius: 5px;
+    position: relative;
+}
+
+.nav.nav-tabs.nav-underline .nav-item a.nav-link.active:before {
+    background: transparent;
+}
+
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation li.has-sub>a:not(.mm-next):after,
+.dropdown-toggle::after {
+    font-weight: 700 !important;
+    color: #008000 !important;
+}
+
+i.customic {
+    color: #008000 !important;
+}
+
+/*************** Trainee ***************/
+.kormokarta-form {
+    display: none;
+}
+
+input.dateField {
+    background-color: #E5E7E9 !important;
+    background-image: url(../images/datepicker-icon.png);
+    background-position: 99% 50%;
+    background-size: 22px, 22px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+@media screen and (min-width: 1300px) {
+
+    a.navbar-brand h3.brand-text,
+    #navbar-mobile ul li.nav-item a.nav-link {
+        padding: 1.9em 1.5em;
+    }
+
+}
+
+@media screen and (min-width: 991.98px) {
+
+    /* nav.header-navbar.navbar.navbar-with-menu.navbar-light {
+        background: #006f52 !important;
+    } */
+}
+
+@media screen and (max-width: 767px) {
+    .avatar-upload {
+        margin: 30px auto !important;
+    }
+
+    .signature-upload {
+        margin-top: 15px !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .signature-upload .avatar-preview {
+        width: 250px !important;
+        margin: auto;
+    }
+
+    .form-actions .form-group button {
+        margin-top: 15px;
+        margin-left: 15px !important;
+    }
+
+    a.nav-link.nav-menu-main.menu-toggle.hidden-xs {
+        display: none;
+    }
+
+    button#menuButton {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+
+    /* .header-navbar .navbar-header {
+        background-color: #006f52 !important;
+    }
+
+    .header-navbar .navbar-container ul {
+        background-color: #005f45 !important;
+    } */
+
+
+    .card-details-body .list-group h4 b {
+        display: block;
+    }
+}

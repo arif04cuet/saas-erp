@@ -1,0 +1,10 @@
+/* // */
+@import url('/css/master-template.css');
+
+body {
+    background-image: none;
+  }
+
+  .site-frontend .aside-toggle{
+      display: none;
+  }

@@ -1,0 +1,4 @@
+function permit () {
+    return false;
+
+}

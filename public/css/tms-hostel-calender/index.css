@@ -1,0 +1,83 @@
+.timeline_item_cell {
+    width: 32%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.timeline_item_separator {
+    background-color: #CECECE;
+    width: 1px;
+    height: 100% !important;
+}
+
+.timeline_item_separator,
+.timeline_item_cell {
+    vertical-align:top;
+    height: 100%;
+    display:inline-block;
+    line-height: 15px;
+    vertical-align:top;
+}
+
+.collection_label {
+    z-index: 2;
+}
+
+.room_status {
+    position: relative;
+}
+
+
+.room_status_indicator {
+    position: absolute;
+    background-color: red;
+    left: 0;
+    top: 0;
+    right: 95%;
+    bottom: 0;
+}
+
+.room_status_indicator_1 {
+    background-color: #4CAF50;
+}
+
+.room_status_indicator_2 {
+    background-color: red;
+}
+
+.room_status_indicator_3 {
+    background-color: #FFA000;
+}
+
+.event_1 {
+    background-color: #9CCC65  !important;
+}
+
+.event_2 {
+    background-color: #BDBDBD !important;
+}
+
+.event_3 {
+    background-color: #40C4FF !important;
+}
+
+.event_4 {
+    background-color: #BDBDBD !important;
+}
+
+.booking_status, .booking_paid {
+    position: absolute;
+    right: 5px;
+}
+
+.booking_status {
+    top: 2px;
+}
+
+.booking_paid {
+    bottom: 2px;
+}
+
+.dhx_cal_event_line:hover .booking-option {
+    background: none !important;
+}

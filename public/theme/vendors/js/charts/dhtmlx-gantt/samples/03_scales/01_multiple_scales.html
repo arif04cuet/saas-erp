@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Multiple scales</title>
+	<script src="../../codebase/dhtmlxgantt.js?v=6.0.7"></script>
+	<link rel="stylesheet" href="../../codebase/dhtmlxgantt.css?v=6.0.7">
+
+	<script src="../common/testdata.js?v=6.0.7"></script>
+	<style>
+		html, body {
+			height: 100%;
+			padding: 0px;
+			margin: 0px;
+			overflow: hidden;
+		}
+		.weekend{
+			background: #F0DFE5 !important;
+		}
+	</style>
+</head>
+
+<body>
+<div id="gantt_here" style='width:100%; height:100%;'></div>
+<script>
+
+	gantt.config.scale_unit = "month";
+	gantt.config.step = 1;
+	gantt.config.date_scale = "%F, %Y";
+	gantt.config.min_column_width = 50;
+
+	gantt.config.scale_height = 90;
+
+	var weekScaleTemplate = function (date) {
+		var dateToStr = gantt.date.date_to_str("%d %M");
+		var endDate = gantt.date.add(gantt.date.add(date, 1, "week"), -1, "day");
+		return dateToStr(date) + " - " + dateToStr(endDate);
+	};
+
+	var daysStyle = function(date){
+		var dateToStr = gantt.date.date_to_str("%D");
+		if (dateToStr(date) == "Sun"||dateToStr(date) == "Sat")  return "weekend";
+	
+		return "";
+	};
+
+	gantt.config.subscales = [
+		{unit: "week", step: 1, template: weekScaleTemplate},
+		{unit:"day", step:1, date:"%D", css:daysStyle }
+	];
+
+	gantt.init("gantt_here");
+	gantt.parse(demo_tasks);
+</script>
+</body>

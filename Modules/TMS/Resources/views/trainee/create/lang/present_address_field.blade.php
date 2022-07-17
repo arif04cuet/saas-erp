@@ -1,0 +1,72 @@
+@if($langPreference == $langOptions['only_english'])
+    <div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="shortDescription1" class="required">@lang('tms::training.present_address') :</label>
+            {!! Form::textarea('present_address', null, [
+                'id' => 'shortDescription1',
+                'data-rule-maxlength'=>'55',
+                'data-msg-required' => Lang::get('labels.This field is required'),
+                'data-msg-maxlength'=>Lang::get('labels.At most 55 characters'),
+                'data-rule-regex-en' => config('regex.en'),
+                'data-rule-no-white-space' => '^(\s|\S)*(\S)+(\s|\S)*$',
+                'rows' => 4,
+                'class' => 'form-control required'
+            ]) !!}
+        </div>
+    </div>
+</div>
+@elseif($langPreference == $langOptions['only_bangla'])
+    <div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="shortDescriptionBn" class="required">@lang('tms::training.present_address_bn') :</label>
+            {!! Form::textarea('present_address_bn', null, [
+                'id' => 'shortDescriptionBn',
+                'data-rule-maxlength'=>'55',
+                'data-msg-required' => Lang::get('labels.This field is required'),
+                'data-msg-maxlength'=>Lang::get('labels.At most 55 characters'),
+                'data-rule-regex-bn' => config('regex.bn'),
+                'data-rule-no-white-space' => '^(\s|\S)*(\S)+(\s|\S)*$',
+                'rows' => 4,
+                'class' => 'form-control required'
+            ]) !!}
+        </div>
+    </div>
+</div>
+@else
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="shortDescription1" class="required">@lang('tms::training.present_address') :</label>
+                {!! Form::textarea('present_address', null, [
+                    'id' => 'shortDescription1',
+                    'data-rule-maxlength'=>'55',
+                    'data-msg-required' => Lang::get('labels.This field is required'),
+                    'data-msg-maxlength'=>Lang::get('labels.At most 55 characters'),
+                    'data-rule-regex-en' => config('regex.en'),
+                    'data-rule-no-white-space' => '^(\s|\S)*(\S)+(\s|\S)*$',
+                    'rows' => 4,
+                    'class' => 'form-control required'
+                ]) !!}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="shortDescriptionBn" class="required">@lang('tms::training.present_address_bn') :</label>
+                {!! Form::textarea('present_address_bn', null, [
+                    'id' => 'shortDescriptionBn',
+                    'data-rule-maxlength'=>'55',
+                    'data-msg-required' => Lang::get('labels.This field is required'),
+                    'data-msg-maxlength'=>Lang::get('labels.At most 55 characters'),
+                    'data-rule-regex-bn' => config('regex.bn'),
+                    'data-rule-no-white-space' => '^(\s|\S)*(\S)+(\s|\S)*$',
+                    'rows' => 4,
+                    'class' => 'form-control required'
+                ]) !!}
+            </div>
+        </div>
+    </div>
+@endif

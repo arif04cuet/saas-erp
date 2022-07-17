@@ -1,0 +1,14 @@
+{
+    "name": "PMS",
+    "alias": "pms",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\PMS\\Providers\\PMSServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

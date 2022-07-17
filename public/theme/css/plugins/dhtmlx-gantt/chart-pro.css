@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------------------------
+*
+*  # DHTMLXGantt charts Custom css
+*
+*  Styles for DHTMLXGantt pro library
+*
+* ---------------------------------------------------------------------------- */
+.high {
+    border: 2px solid #F55845;
+    background: #F55845;
+}
+
+.high .gantt_task_progress {
+    background: #db2536;
+}
+
+.medium {
+    border: 2px solid #4CAF50;
+    background: #4CAF50;
+}
+
+.medium .gantt_task_progress {
+    background: #2a9c4e;
+}
+
+.low {
+    border: 2px solid #6ba8e3;
+    color: #6ba8e3;
+    background: #6ba8e3;
+}
+
+.low .gantt_task_progress {
+    background: #547dab;
+}
+
+.baseline {
+    position: absolute;
+    border-radius: 2px;
+    opacity: 0.6;
+    margin-top: -7px;
+    height: 12px;
+    background: #ffd180;
+    border: 1px solid rgb(255, 153, 0);
+}
+
+/* move task lines upper */
+.gantt_task_line, .gantt_line_wrapper {
+    margin-top: -9px;
+}
+
+.gantt_side_content {
+    margin-bottom: 7px;
+}
+
+.gantt_task_link .gantt_link_arrow {
+    margin-top: -12px
+}
+
+.gantt_side_content.gantt_right {
+    bottom: 0;
+}

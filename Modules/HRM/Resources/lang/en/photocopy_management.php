@@ -1,0 +1,25 @@
+<?php
+return [
+    'title' => 'Photocopy Management',
+    'menu_title' => 'Photocopy Management',
+    'list_menu_title' => 'Photocopy Requests',
+    'list_card_title' => 'Photocopy Request List',
+    'card_title' => 'Photocopy Management',
+    'type' => 'Type',
+    'priority' => 'Priority',
+    'no_of_pages' => 'No. of Pages',
+    'requester' => 'Requester',
+    'requester_dept' => 'Requesting Department',
+    'list_table_title' => 'Title',
+    'create_button' => 'New Photocopy Request',
+    'update_button' => 'Update Photocopy Request',
+    'create_card_title' => 'Create Photocopy Request',
+    'create_form_title' => 'Photocopy Request Form',
+
+    'submit_request' => 'Submit Request',
+    'create_trainee_form_title' => 'প্রশিক্ষণার্থী যোগ ফর্ম',
+    'edit_trainee_form_title' => 'প্রশিক্ষণার্থী সম্পাদনা ফর্ম',
+    'show_form_title' => 'প্রশিক্ষণ সম্পর্কিত তথ্য',
+    'edit_card_title' => 'প্রশিক্ষণ সম্পাদনা করুন',
+    'edit_form_title' => 'প্রশিক্ষণ সম্পাদনা ফর্ম',
+];

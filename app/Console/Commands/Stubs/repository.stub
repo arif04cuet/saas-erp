@@ -1,0 +1,12 @@
+<?php
+
+
+namespace DummyNamespace;
+
+use App\Repositories\AbstractBaseRepository;
+
+class DummyClass extends AbstractBaseRepository {
+
+
+
+}

@@ -1,0 +1,14 @@
+{
+    "name": "MMS",
+    "alias": "mms",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\MMS\\Providers\\MMSServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

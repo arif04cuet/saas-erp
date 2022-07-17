@@ -1,0 +1,14 @@
+{
+    "name": "HM",
+    "alias": "hm",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\HM\\Providers\\HMServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

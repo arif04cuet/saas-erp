@@ -1,0 +1,14 @@
+{
+    "name": "VMS",
+    "alias": "vms",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\VMS\\Providers\\VMSServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

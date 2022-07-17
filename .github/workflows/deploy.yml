@@ -1,0 +1,28 @@
+name: Deploy BTM application to RDCD VM
+
+# Trigger the workflow on push and
+# pull request events on the production branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Authenticate to the the server via ssh
+# and run our deployment script
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.SSHKEY }}
+          #password: ${{ secrets.PASSWORD }}
+          script: "cd /var/www/html/btm.rdcd.orangebd.com && git pull origin main && chmod +x ./.scripts/deploy.sh && sh ./.scripts/deploy.sh"

@@ -1,0 +1,185 @@
+a{
+    color: #66b854 !important;
+}
+
+.course-list-title h2.card-title{
+    font-size:30px;
+}
+div.course-list-page ul.inner-container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 14px;
+} 
+
+div.course-list-page ul.inner-container li{
+    background-color: #faf3ea;
+    padding:10px 10px 10px 10px;
+    width:259px;
+    border-radius: 6px;
+}
+div.course-list-page ul li div.img-box{
+    width: 240px;
+    height: 170px;
+    text-align: center;
+}
+div.course-list-page ul li div.img-box img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+div.course-list-page div.course-time-area h4{
+    font-size: 14px;
+    color: #ff9000;
+    font-weight: 500;
+}
+div.course-list-page div.course-time-area p{
+    font-size: 12px;
+    line-height: 15px;
+}
+div.course-list-page div.course-time-area a.btn.btn-success.btn-sm{
+    color: #fff !important;
+    font-weight: 700;
+}
+
+/*********** Course Details ***********/
+.course-detail-banner{
+    display: flex;
+    padding:100px 10px;
+    /* background-image: linear-gradient(#8ed390, #a3b4ec); */
+    background-color: #8ed390;
+    justify-content: center;
+    /* margin: 0 -15px; */
+}
+.course-detail-banner h2{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+}
+
+div.course-item{
+    background-color: #e3f4e3;
+    padding:10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+div.course-item h4{
+    padding:10px 0px;
+}
+
+div.course-item div.course-time-area a.btn.btn-success.btn-sm{
+    color: #fff !important;
+    font-weight: 700;
+}
+
+/********* Our Instrator *********/
+
+.our-instructor{
+    background-color:#fff;
+}
+.our-instructor h2{
+   font-size: 16px;
+   color:#c548c6;
+   font-weight: 700;
+   padding:40px 0px 15px 0px;
+}
+div.our-instructor ul.inner-container{
+    flex: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+div.our-instructor ul.inner-container li{
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    background-color: #fff;
+}
+div.our-instructor ul.inner-container li div.hover-social{
+    display: none;
+    padding: 3px 6px;
+    background-color: #fff;
+    bottom:-4%;
+    left:32%;
+    line-height: 0px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+div.our-instructor ul.inner-container li:hover{
+    background-color: #c548c6;
+}
+div.our-instructor ul.inner-container li:hover > div.hover-social{
+    display: block;
+}
+div.our-instructor ul.inner-container li:hover > div.instructor-des p{
+    color: #fff;
+}
+div.our-instructor ul.inner-container li div.instructor-des{
+    padding:10px;
+    line-height: 20px;
+}
+div.our-instructor ul.inner-container li img{
+    display: block;
+    width:210px;
+    height: auto;
+}
+div.our-instructor ul.inner-container li p:first-child{
+    color:#bc3fbd;
+}
+
+/*************** Latest Course List ***********/
+
+div.latest-course-list h2{
+    font-size:30px;
+    font-weight: 500px;
+    text-align: center;
+    padding:15px 0px;
+} 
+div.latest-course-list ul.inner-container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 14px;
+} 
+
+div.latest-course-list ul.inner-container li{
+    background-color: #faf3ea;
+    padding:10px 10px 10px 10px;
+    width:263px;
+    border-radius: 6px;
+}
+div.latest-course-list ul li div.img-box{
+    width: 244px;
+    height: 170px;
+    text-align: center;
+}
+div.latest-course-list ul li div.img-box img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+div.latest-course-list div.course-time-area h4{
+    font-size: 14px;
+    color: #ff9000;
+    font-weight: 500;
+}
+div.latest-course-list div.course-time-area p{
+    font-size: 12px;
+    line-height: 15px;
+}
+div.latest-course-list div.course-time-area a.btn.btn-success.btn-sm{
+    color: #fff !important;
+    font-weight: 700;
+}
+
+div.direction .course-purpose h2,div.direction .training-method h2,div.direction .training-rule h2,
+div.direction .training-module h2{
+    font-size:20px;
+    font-weight: 500;
+    padding: 10px 0px;
+}

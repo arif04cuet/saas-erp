@@ -1,0 +1,11 @@
+export DB_HOST=mysql
+export DB_PASSWORD=bs@2345678
+export DB_USERNAME=bard
+export DB_DATABASE=bard-erp
+export MAIL_DRIVER=smtp
+export MAIL_HOST=smtp.gmail.com
+export MAIL_PORT=587
+export MAIL_USERNAME=brainstation23.test@gmail.com
+export MAIL_PASSWORD=123456Tt
+export MAIL_ENCRYPTION=tls
+export MAIL_FROM_NAME="BARD Automation"

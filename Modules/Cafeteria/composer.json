@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/cafeteria",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Cafeteria\\Providers\\CafeteriaServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Cafeteria\\": ""
+        }
+    }
+}

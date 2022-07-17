@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Backend storage using REST API</title>
+	<script src="../../codebase/dhtmlxgantt.js?v=6.0.7"></script>
+	<link rel="stylesheet" href="../../codebase/dhtmlxgantt.css?v=6.0.7">
+	<style>
+		html, body {
+			height: 100%;
+			padding: 0px;
+			margin: 0px;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+<div id="gantt_here" style='width:100%; height:100%;'></div>
+<script>
+	gantt.message({
+		text: "This example requires a RESTful API on the backend. <br>Check our <a target='_blank' href='https://docs.dhtmlx.com/gantt/desktop__server_side.html'>guides on backend integration here</a> ",
+		expire: -1
+	});
+	gantt.message({
+		text: "You can also find our step-by-step tutorials for different platforms <a target='_blank' href='https://docs.dhtmlx.com/gantt/desktop__howtostart_guides.html'>here </a> ",
+		expire: -1
+	});
+
+	gantt.config.xml_date = "%Y-%m-%d %H:%i:%s";
+	gantt.init("gantt_here");
+	gantt.load("/server/data");
+
+	var dp = new gantt.dataProcessor("/server/data");
+	dp.init(gantt);
+	dp.setTransactionMode("REST");
+</script>
+</body>
