@@ -1,9 +1,12 @@
 <div class="master-nav p-0">
    <div class="master-nav position-absolute">
       <div class="master-company">
-         <a href="{{url('/')}}" class="brand">
-            <img src="{{asset('images/somobay-odhidoptor-004.webp')}}" alt="" />
+         <div class="d-flex justtify-content-center align-items-center">
+         <a href="{{route('dashboard')}}" class="brand">
+            <img src="{{asset('images/logo_.png')}}" alt="" />
          </a>
+         <div class="ml-1 text-info">{{ trans('labels.erp') }}</div>
+         </div>
       </div>
       <!-- // -->
       <div class="master-quick-actions">

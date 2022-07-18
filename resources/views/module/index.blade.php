@@ -64,10 +64,15 @@
                                                                   <i class="ft-eye white"></i>
                                                                   <!-- {{ trans('labels.details') }} -->
                                                               </a>
-                                                              <a href="{{ route('module.destroy',$module->id) }}" class="master btn btn-warning" title="{{trans('module.button.delete')}}">
+                                                              {{-- <a href="{{ route('module.destroy',$module->id) }}" class="master btn btn-warning" title="{{trans('module.button.delete')}}">
                                                                   <i class="ft-trash white"></i>
                                                                   <!-- {{ trans('labels.details') }} -->
-                                                              </a>
+                                                              </a> --}}
+                                                              <form method="POST" action="{{ route('module.destroy', $module->id) }}">
+                                                                @csrf
+                                                                <input name="_method" type="hidden" value="DELETE">
+                                                                <button onclick="return confirm('Are you sure?')" class="master btn btn-warning" type="submit" > <i class="ft-trash white"></i></button>
+                                                            </form>
                                                           {{-- @endcan --}}
                                                       </div>
                                                       </td>

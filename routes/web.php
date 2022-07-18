@@ -103,7 +103,9 @@ Route::middleware(['auth'])
 
 
 //------------Frontend routes ------------------
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', function () {
+    return redirect(route('login'));
+})->name('home');
 Route::post('/', 'NewsLetterController@store')->name('email.create');
 Route::get('/search-course', 'LandingPageSearchController@searchCourse')->name('search.course');
 Route::get('/offline-course', 'HomeController@offlineCourseListPublicView')->name('offline.courses.public.view');

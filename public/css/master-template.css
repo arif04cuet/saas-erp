@@ -6,7 +6,7 @@
 /* // */
 body {
   font-family: "SolaimanLipi", sans-serif;
-  background: url(~/assets/images/background.webp) no-repeat center center fixed;
+  /* background: url(~/assets/images/background.webp) no-repeat center center fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -60,7 +60,7 @@ app-switcher {
   padding: 15px 0px;
   padding-bottom: 80px;
   position: relative;
-  background: url('/images/background-v1.0.webp');
+  /* background: url('/images/background-v1.0.webp'); */
 }
 
 /* NAV CSS */

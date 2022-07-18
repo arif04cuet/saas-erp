@@ -30,6 +30,6 @@ class DashboardController extends Controller
             $modules = Auth::user()->doptor->modules->pluck('short_code', 'id');
         $doptorName = Auth::user()->doptor->getName();
 
-        return view('welcome', compact('modules', 'notifications', 'doptorName'));
+        return view('dashboard', compact('modules', 'notifications', 'doptorName'));
     }
 }

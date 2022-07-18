@@ -1,6 +1,7 @@
 <?php
 return [
-    'btm' => 'BTM',
+    'erp' => 'RDCD ERP',
+    'btm' => 'ERP',
     'landing' => 'Front Page',
     'module_title' => 'RDCD',
     'id' => 'Id',
