@@ -2,7 +2,7 @@
     @foreach ($modules as $module)
         {{-- @can(strtolower($module) . '-access') --}}
         @php
-            switch ($module) {
+            switch ($module->short_code) {
                 case 'TMS':
                     $style = 'background-color:#3cb371';
                     $fontLine = '<h1><i class="las la-school font-large-2" title="BTC"></i></h1>';
@@ -40,9 +40,13 @@
                         {!! $fontLine !!}
                         {{-- </div> --}}
                         {{-- <div class="col-8 pl-2"> --}}
-                        <h4>{{ trans('labels.' . $module) }}</h4>
+                        
+                        @php
+                            $name = 'name_'.$lang;
+                        @endphp
+                        <h4>{{ $module->$name }}</h4>
                         <h6 class="text-muted"><a
-                                href="{{ url(config('app.admin_prefix').'/'.strtolower($module)) . '/' }}">{{ trans('labels.' . $module) }}
+                                href="{{ url(config('app.admin_prefix').'/'.strtolower($module->slug)) . '/' }}">{{ $module->$name }}
                                 <i class="las la-angle-double-right" style="color:#ffffff !important"></i></a>
                         </h6>
                         {{-- </div> --}}

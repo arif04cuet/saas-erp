@@ -25,11 +25,11 @@ class DashboardController extends Controller
     {
         $notifications = $this->appNotificationService->getUnreadNotifications();
         if (Auth::user()->hasRole('ROLE_SUPER_ADMIN')) {
-            $modules = EntityModule::all()->pluck('short_code', 'id');
+            $modules = EntityModule::all();
         } else
-            $modules = Auth::user()->doptor->modules->pluck('short_code', 'id');
+            $modules = Auth::user()->doptor->modules;
         $doptorName = Auth::user()->doptor->getName();
-
-        return view('dashboard', compact('modules', 'notifications', 'doptorName'));
+        $lang = app()->getLocale();
+        return view('dashboard', compact('modules', 'notifications', 'doptorName', 'lang'));
     }
 }

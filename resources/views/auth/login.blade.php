@@ -10,7 +10,10 @@
                     <div>
                         <div class="">
                             <div class="card-title text-center m-0">
-                                <img class="brand-logo" width="230" alt="bard erp logo" src="{{ asset('images/training-btm-002.webp') }}">
+                                
+                                <img width="50" src="{{ asset('images/logo_.png') }}">
+                                <h4 class="text-info my-1">{{ trans('labels.erp') }}</h4>
+                                
                             </div>
                         </div>
                         <div class="separator"></div>
@@ -144,7 +147,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url({{asset('/images/background-v1.0.webp')}});
+            background: lightblue;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: bottom;
@@ -165,7 +168,7 @@
             align-items: center;
         }
         .grid-1 {
-            background: url({{asset('images/btm-login-side.webp')}});
+            /* background: url({{asset('images/btm-login-side.webp')}}); */
             background-size: cover;
         }
         .grid-2 {

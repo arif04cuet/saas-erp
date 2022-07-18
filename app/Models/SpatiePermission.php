@@ -17,6 +17,11 @@ class SpatiePermission extends Permission
     {
         return [
             [
+                'name' => 'hrm-user-access',
+                'label' => 'hrm-user-access',
+                'module' => 'hrm',
+            ],
+            [
                 'name' => 'beneficiary_dashboard',
                 'label' => 'Beneficiary dashboard',
                 'module' => 'hrm',

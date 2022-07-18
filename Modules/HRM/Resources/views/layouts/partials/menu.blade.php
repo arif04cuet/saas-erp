@@ -30,17 +30,197 @@
                 <i class="la la-list-alt"></i> @lang('hrm::employee.religion.title')
             </a>
         </li>
-        {{--
-        <!-- General Circular -->
-        <li class="{{ (request()->is('hrm/circular')) ? 'active' : '' }}">
+
+        <li class="master-aside-menu-item {{ isActive(['circular.index'],'route') }}">
             <a href="{{ route('circular.index') }}">
-                <i class="la la-list-ol"></i>
-                <span class="menu-title" data-i18n="nav.dash.main">@lang('hrm::circular.title')</span>
+                <i class="la la-list-ol"></i> @lang('hrm::circular.title')
             </a>
         </li>
+        
+        <li class="master-aside-menu-item dropdown {{isActive(['leave-types.index','leaves.create', 'leaves.index','leave-balances.index'],'route')}}">
+            <a href="#" >
+                <i class="la la-edit"></i>
+                <span class="menu-title" data-i18n="nav.templates.main">
+                    {{ trans('hrm::leave.leave') }}
+                </span>
+            </a>
+    
+            <ul>
+                <li>
+                    <a href="{{ route('leaves.create') }}" class="{{isActive(['leaves.create'],'route')}}">
+                        <i class="la la-list"></i>
+                        <span class="menu-title"
+                            data-i18n="nav.dash.main">{{ trans('hrm::leave.leave_application') }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('leaves.index') }}" class="{{isActive(['leaves.index'],'route')}}">
+                        <i class="la la-user"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            {{ trans('hrm::leave.leave_list') }}
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('leave-balances.index') }}" class="{{isActive(['leave-balances.index'],'route')}}">
+                        <i class="la la-user"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            {{ trans('hrm::leave.leave_balance') }}
+                        </span>
+                    </a>
+                </li>
+                @can('hrm-user-access')
+                <li>
+                    <a href="{{ route('leave-types.index') }}" class="{{isActive(['leave-types.index'],'route')}}">
+                        <i class="la la-user"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            {{ trans('hrm::leave.leave_type') }}
+                        </span>
+                    </a>
+                </li>
+                @endcan
+                
+            </ul>
+        </li>
+
+
+        <li class="master-aside-menu-item dropdown {{isActive(['appraisals.settings.create','appraisals.settings.index'],'route')}}">
+            <a href="#" >
+                <i class="la la-edit"></i>
+                <span class="menu-title" data-i18n="nav.templates.main">
+                    @lang('hrm::appraisal.title')
+                </span>
+            </a>
+    
+            <ul>
+                <li>
+                    <a href="{{ route('appraisals.settings.index') }}" class="{{isActive(['appraisals.settings.create','appraisal.create','appraisals.settings.index'],'route')}}">
+                        <i class="la la-list"></i>
+                        <span class="menu-title"
+                            data-i18n="nav.dash.main">@lang('hrm::appraisal_setting.appraisal_setting')  - @lang('labels.list')</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('appraisals.settings.create') }}" class="{{isActive(['appraisals.settings.create'],'route')}}">
+                        <i class="la la-user"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            @lang('hrm::appraisal_setting.appraisal_setting')  - @lang('labels.create')
+                        </span>
+                    </a>
+                </li>
+                @if (get_user_designation()->rank_id <= 9)
+                <li>
+                    <a href="{{ route('appraisal.create',['class'=>'first']) }}" class="{{isActive(['appraisal.create'],'route')}}">
+                        <i class="la ft-file-text"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            @lang('labels.form') - @lang('hrm::appraisal.first_class')
+                        </span>
+                    </a>
+                </li>
+                @endif
+                
+                <li>
+                    <a href="{{ route('appraisal.create',['class'=>'second']) }}" class="{{isActive(['appraisal.create'],'route')}}">
+                        <i class="la ft-file-text"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            @lang('labels.form') - @lang('hrm::appraisal.second_class')
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('appraisal.create',['class'=>'third']) }}" class="{{isActive(['appraisal.create'],'route')}}">
+                        <i class="la ft-file-text"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            @lang('labels.form') - @lang('hrm::appraisal.third_class')
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('appraisal.create',['class'=>'fourth']) }}" class="{{isActive(['appraisal.create'],'route')}}">
+                        <i class="la ft-file-text"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            @lang('labels.form') - @lang('hrm::appraisal.fourth_class')
+                        </span>
+                    </a>
+                </li>
+
+
+
+                <li>
+                    <a href="{{ route('appraisals.index') }}" class="{{isActive(['appraisals.index'],'route')}}">
+                        <i class="la ft-file-text"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            {{ trans('hrm::appraisal.appraisal_list') }}
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('appraisal.invitation.index') }}" class="{{isActive(['appraisal.invitation.index'],'route')}}">
+                        <i class="la ft-file-text"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            {{ trans('hrm::appraisal.invitation.title') }}
+                        </span>
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </li>
+
+
+        <li class="master-aside-menu-item dropdown {{isActive(['complaints.invitations.index','complaint.create','complaint.index','complaints.invitations.create'],'route')}}">
+            <a href="#" >
+                <i class="la ft-users"></i>
+                <span class="menu-title" data-i18n="nav.templates.main">
+                    @lang('hrm::complaint.title')
+                </span>
+            </a>
+    
+            <ul>
+                <li>
+                    <a href="{{ route('complaint.create') }}" class="{{isActive(['complaint.create'],'route')}}">
+                        <i class="la la-list"></i>
+                        <span class="menu-title"
+                            data-i18n="nav.dash.main">@lang('hrm::complaint.title') @lang('labels.form')</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('complaint.index') }}" class="{{isActive(['complaint.index'],'route')}}">
+                        <i class="la la-user"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            @lang('hrm::complaint.title') @lang('labels.list')
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('complaints.invitations.create') }}" class="{{isActive(['complaints.invitations.create'],'route')}}">
+                        <i class="la la-user"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            @lang('hrm::complaint.complaint_invitation_form')
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="{{ route('complaints.invitations.index') }}" class="{{isActive(['complaints.invitations.index'],'route')}}">
+                        <i class="la la-user"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">
+                            @lang('hrm::complaint.complaint_invitation_list')
+                        </span>
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </li>
+
+
 
         <!-- House Circular -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="#" class="">
                 <i class="la la-file-o"></i>
                 <span class="menu-title"
@@ -87,10 +267,10 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
 
         <!-- Calender -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="javascript:;" class="">
                 <i class="la la-calendar"></i>
                 <span class="menu-title"
@@ -110,11 +290,11 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
         <!-- // Calender -->
 
         <!-- Contact -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="#" class="">
                 <i class="la la-mobile-phone"></i>
                 <span class="menu-title"
@@ -136,50 +316,10 @@
                     </a>
                 </li>
             </ul>
-        </li>
-
-        <!-- Leave -->
-        <li class="nav-item">
-            <a href="#" class=""><i class="la la-calendar-times-o"></i>
-                <span class="menu-title"
-                    data-i18n="nav.templates.main">{{ trans('hrm::leave.leave') }}</span>
-            </a>
-            <ul class="menu-content">
-                <li class="{{ (request()->routeIs('leaves.create')) ? 'active' : '' }}">
-                    <a href="{{ route('leaves.create') }}">
-                        <i class="la la-hotel"></i>
-                        <span class="menu-title"
-                            data-i18n="nav.dash.main">{{ trans('hrm::leave.leave_application') }}</span>
-                    </a>
-                </li>
-                <li class="{{ (request()->routeIs('leaves.index')) ? 'active' : '' }}">
-                    <a href="{{ route('leaves.index') }}">
-                        <i class="la la-list-alt"></i>
-                        <span class="menu-title"
-                            data-i18n="nav.dash.main">{{ trans('hrm::leave.leave_list') }}</span>
-                    </a>
-                </li>
-                <li class="{{ (request()->is('leave-balances.index')) ? 'active' : '' }}">
-                    <a href="{{ route('leave-balances.index') }}">
-                        <i class="la la-list-alt"></i>
-                        <span class="menu-title"
-                            data-i18n="nav.dash.main">{{ trans('hrm::leave.leave_balance') }}</span>
-                    </a>
-                </li>
-                @can('hrm-user-access')
-                    <li class="{{ (request()->is('leave-types.index')) ? 'active' : '' }}">
-                        <a href="{{ route('leave-types.index') }}">
-                            <i class="la la-list-alt"></i>
-                            <span class="menu-title"
-                                data-i18n="nav.dash.main">{{ trans('hrm::leave.leave_type') }}</span>
-                        </a>
-                    </li>
-                @endcan
-            </ul>
-        </li>
+        </li> --}}
 
         <!-- Employee Loan -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="#" class=""><i class="la ft-file-text"></i>
                 <span class="menu-title" data-i18n="nav.templates.main">
                     @lang('hrm::employee.loan.title')
@@ -222,11 +362,11 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
         <!-- / Employee Loan -->
 
         <!-- Note Options -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="#" class=""><i class="la ft-file-text"></i>
                 <span class="menu-title" data-i18n="nav.templates.main">@lang('hrm::note.title')</span>
             </a>
@@ -248,11 +388,11 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
         <!-- / Note Options -->
 
         <!-- Appraisal  Options -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="#" class=""><i class="la ft-users"></i>
                 <span class="menu-title"
                     data-i18n="nav.templates.main">@lang('hrm::appraisal.title')</span></a>
@@ -315,11 +455,11 @@
                 </li>
             </ul>
 
-        </li>
+        </li> --}}
         <!-- / Appraisal Options -->
 
         <!-- / CV Evaluation Menu items -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="#" class=""><i class="la ft-briefcase"></i>
                 <span class="menu-title" data-i18n="nav.templates.main">
                     @lang('hrm::circular.job')
@@ -348,10 +488,10 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
 
         <!-- Complaint  Options -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="#" class=""><i class="la ft-users"></i>
                 <span class="menu-title"
                     data-i18n="nav.templates.main">@lang('hrm::complaint.title')</span></a>
