@@ -490,6 +490,11 @@ form.course-custom-textarea textarea {
     background-color: #008000 !important;
     border-radius: 5px;
     position: relative;
+    color: white;
+}
+
+.nav.nav-tabs.nav-underline .nav-item a.nav-link.active .la {
+    color: white!important;
 }
 
 .nav.nav-tabs.nav-underline .nav-item a.nav-link.active:before {
