@@ -31,7 +31,7 @@
             </a>
         </li>
 
-        <li class="master-aside-menu-item {{ isActive(['circular.index'],'route') }}">
+        {{-- <li class="master-aside-menu-item {{ isActive(['circular.index'],'route') }}">
             <a href="{{ route('circular.index') }}">
                 <i class="la la-list-ol"></i> @lang('hrm::circular.title')
             </a>
@@ -215,7 +215,7 @@
                 
                 
             </ul>
-        </li>
+        </li> --}}
 
 
 
