@@ -6,7 +6,7 @@
 /* // */
 body {
   font-family: "SolaimanLipi", sans-serif;
-  /* background: url(~/assets/images/background.webp) no-repeat center center fixed; */
+  background: url(~/assets/images/background.webp) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -60,7 +60,7 @@ app-switcher {
   padding: 15px 0px;
   padding-bottom: 80px;
   position: relative;
-  /* background: url('/images/background-v1.0.webp'); */
+  background: url('/images/background-v1.0.webp');
 }
 
 /* NAV CSS */
@@ -539,4 +539,53 @@ table.master tbody tr:nth-child(2n-1) {
 .cursor-ponter {
   cursor: pointer;
   user-select: none;
+}
+.dashboard-box {
+    background: #fff;
+    box-shadow: 2px 7px 10px 5px #ddd;
+    padding: 8px 17px;
+    display: flex;
+    align-items: center;
+    min-height: 95px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 4px;
+}
+.dashboard-box .icon {
+    min-width: 60px;
+    max-width: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 12px;
+}
+.dashboard-box .icon h1{
+    margin: 0;
+}
+.dashboard-box .icon h1 i {
+    font-size: 33px!important;
+    color: #fff!important;
+}
+.dashboard-box .info {
+    height: 100%!important;
+}
+.dashboard-box .info h4, div.card-body.module-wrap h4 {
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+    color: #1d1d1d!important;
+    margin-bottom: 6px;
+}
+.dashboard-box .info h6, div.card-body.module-wrap h6 a {
+    text-align: left;
+    margin: 0;
+    font-size: 12px;
+    color: #3e9b5a!important;
+}
+div.card-body.module-wrap h6 a i {
+    display: none;
 }
