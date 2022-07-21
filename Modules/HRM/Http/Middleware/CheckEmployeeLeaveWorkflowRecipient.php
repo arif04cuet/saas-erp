@@ -19,7 +19,7 @@ class CheckEmployeeLeaveWorkflowRecipient
     {
         $leaveRequest = $request->leaveRequest;
 
-        if(!$leaveRequest->isRecipient()) {
+        if (!$leaveRequest->isRecipient()) {
             abort(403);
         }
 

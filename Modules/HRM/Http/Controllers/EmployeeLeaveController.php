@@ -81,6 +81,7 @@ class EmployeeLeaveController extends Controller
      */
     public function create()
     {
+
         $user = Auth::user();
 
         if (!$this->leaveRequestService->canUserApplyForLeave()) {
@@ -139,6 +140,7 @@ class EmployeeLeaveController extends Controller
         }
 
         if ($this->leaveRequestService->store($employeeLeaveCreateRequest->all())) {
+            $message = '';
             if (Session::has('success')) {
                 $message = Session::get('success');
             }

@@ -28,7 +28,7 @@
                     <div class="tab-content px-1 pt-1">
                         <div class="tab-pane active show" role="tabpanel" id="general" aria-labelledby="general-tab"
                              aria-expanded="true">
-                            {!! Form::model($employee, ['url' => ['/hrm/employee', $employee->id], 'method' =>'put' , 'files'=>'true', 'class'=>'form form-horizontal hrm-employee-create-form-general', 'novalidate']) !!}
+                            {!! Form::model($employee, ['url' => route('employee.update',$employee->id), 'method' =>'put' , 'files'=>'true', 'class'=>'form form-horizontal hrm-employee-create-form-general', 'novalidate']) !!}
                             @include('hrm::employee.create.general_info')
                             {!! Form::close() !!}
                         </div>

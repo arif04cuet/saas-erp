@@ -41,6 +41,8 @@ class AppServiceProvider extends ServiceProvider
 
         $this->setupDashboardClient();
 
+        $this->setupViewVariables();
+
         // DB::listen(function ($query) {
         //     logger([
         //         $query->sql,
@@ -97,6 +99,24 @@ class AppServiceProvider extends ServiceProvider
                 "client_id" => config('services.dashboard.client_id'),
                 "client_secret" => config('services.dashboard.client_secret'),
             ])->json('access_token');
+        });
+    }
+
+    public function setupViewVariables()
+    {
+
+        view()->composer("layouts.partials.master_nav", function () {
+            $lang = match (app()->getLocale()) {
+                'en' => 'name_eng',
+                'bn' => 'name_bng'
+            };
+            view()->share('doptorName', doptor($lang) ?: trans('labels.erp'));
+
+            $url = '';
+            if (auth()->user()->user_type == 'Employee')
+                $url = route('employee.show', auth()->user()->employee->id);
+
+            view()->share('myProfileUrl', $url);
         });
     }
 }

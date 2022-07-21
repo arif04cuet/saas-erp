@@ -5,7 +5,7 @@
          <a href="{{route('dashboard')}}" class="brand">
             <img src="{{asset('images/logo_.png')}}" alt="" />
          </a>
-         <div class="ml-1 text-info">{{ trans('labels.erp') }}</div>
+         <div class="ml-1 text-info">{{ $doptorName}}</div>
          </div>
       </div>
       <!-- // -->
@@ -28,7 +28,10 @@
                <div class="dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false" >
                   <img src="{{asset('images/default-profile-picture.png')}}"  alt="">
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" >
-                     <a class="dropdown-item"><i class="las la-user-circle black"></i> {{ Auth::user()->name }}</a>
+
+                     <a class="dropdown-item" href="{{$myProfileUrl}}">
+                        <i class="las la-user-circle black"></i> {{ Auth::user()->name }}
+                     </a>
 
                      <hr class="m-0 p-0">
 

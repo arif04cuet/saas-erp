@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by VS Code.
  * User: Araf
@@ -102,8 +103,10 @@ trait Workflowable
     {
         $data = [];
 
-        if ($this->stateMachine()->getObject()->receiver_id == auth()->user()->id
-            || $this->stateMachine()->getObject()->requester_id == auth()->user()->id) {
+        if (
+            $this->stateMachine()->getObject()->receiver_id == auth()->user()->id
+            || $this->stateMachine()->getObject()->requester_id == auth()->user()->id
+        ) {
 
             $data[] = 'receive';
         }
@@ -119,7 +122,7 @@ trait Workflowable
     private function stateOwner()
     {
         $lastHistory = $this->lastStateHistory();
-
+        // logger(auth()->user());
         if (is_null($lastHistory->get()->last())) {
             return null;
         }
@@ -128,6 +131,8 @@ trait Workflowable
             ->where('state_history_id', $lastHistory->get()->last()->id)
             ->where('user_id', auth()->user()->id)
             ->first();
+
+
 
         return empty($stateRecipient) ? null : $stateRecipient;
     }
@@ -150,8 +155,11 @@ trait Workflowable
     {
         $object = $this->stateMachine()->getObject();
 
-        $roles = $this->stateMachine()->metadata('state', $this->stateMachine()->getState(),
-            'recipients.type.after.roles');
+        $roles = $this->stateMachine()->metadata(
+            'state',
+            $this->stateMachine()->getState(),
+            'recipients.type.after.roles'
+        );
 
         return ($this->getUsers($object->requester_id, $roles));
     }
@@ -160,8 +168,11 @@ trait Workflowable
     {
         $object = $this->stateMachine()->getObject();
 
-        $keys = $this->stateMachine()->metadata('state', $this->stateMachine()->getState(),
-            'recipients.type.after.keys');
+        $keys = $this->stateMachine()->metadata(
+            'state',
+            $this->stateMachine()->getState(),
+            'recipients.type.after.keys'
+        );
 
         $recipients = collect();
 
@@ -194,7 +205,6 @@ trait Workflowable
             });
 
         return !empty($users) ? $users : collect();
-
     }
 
     private function nextRecipientsRoles()
@@ -222,11 +232,9 @@ trait Workflowable
                     $recipientRoles = array_merge($roles, $recipientRoles);
                 }
             }
-
         }
 
         return array_unique($recipientRoles);
-
     }
 
     private function saveRecipients($beforeRecipients)
@@ -271,8 +279,10 @@ trait Workflowable
      */
     private function sendNotification($recipients, $notificationType): void
     {
-        $notificationType = NotificationType::where('name',
-            NotificationTypeConstant::getConstant($notificationType))->firstOrFail();
+        $notificationType = NotificationType::where(
+            'name',
+            NotificationTypeConstant::getConstant($notificationType)
+        )->firstOrFail();
 
         if (!count($recipients)) {
             return;
@@ -289,17 +299,18 @@ trait Workflowable
             ]);
 
             // Commented out by shohag since sending mail is not required by BARD
-//            Mail::to($recipient)->send(
-//                new WorkflowEmailNotification(
-//                    'IMS Workflow',
-//                    $notification->message,
-//                    $this->getStateUrl()
-//                )
-//            );
+            //            Mail::to($recipient)->send(
+            //                new WorkflowEmailNotification(
+            //                    'IMS Workflow',
+            //                    $notification->message,
+            //                    $this->getStateUrl()
+            //                )
+            //            );
         }
-        $recipientUsers = User::find($recipients);
+
+        //$recipientUsers = User::find($recipients);
         $message = "";
-        foreach ($recipientUsers as $recipientUser) {
+        foreach ($recipients as $recipientUser) {
             $message .= $recipientUser->name . ' ';
         }
         Session::flash('success', 'Notification Sent To ' . $message);

@@ -90,10 +90,13 @@ class EmployeeController extends Controller
 
         // dd($employeeDepartments,$employeeDesignations);
 
-        return view('hrm::employee.create', compact(
+        return view(
+            'hrm::employee.create',
+            compact(
                 'employeeDepartments',
                 'employeeDesignations',
-                'employee_id', 'institutes',
+                'employee_id',
+                'institutes',
                 'academicDepartments',
                 'academicDegree',
                 'academicDurations',
@@ -138,7 +141,8 @@ class EmployeeController extends Controller
         }
         $photoUrl = (!empty($employee->photo)) ? 'employee-profile/' . $employee->photo : 'employee-profile/default.png';
 
-        return view('hrm::employee.show',
+        return view(
+            'hrm::employee.show',
             compact(
                 'employee',
                 'currentPostDuration',
@@ -161,7 +165,7 @@ class EmployeeController extends Controller
         $employeeTrainingDuration = $this->employeeTrainingService->getTrainingDuration();
         $employeeSalaryScale = $this->employeeService->getEmployeeSalaryScale();
         $areaOfInterests = $this->areaOfInterestService->getInterestsForDropdown();
-        
+
         $employee = $this->employeeService->findOne($id, [
             'employeePersonalInfo',
             'employeeEducationInfo',
@@ -178,28 +182,38 @@ class EmployeeController extends Controller
 
 
         if (!empty($employee->employeePersonalInfo->date_of_birth)) {
-            $employee->employeePersonalInfo->date_of_birth = date('d F, Y',
-                strtotime($employee->employeePersonalInfo->date_of_birth));
+            $employee->employeePersonalInfo->date_of_birth = date(
+                'd F, Y',
+                strtotime($employee->employeePersonalInfo->date_of_birth)
+            );
         }
 
         if (!empty($employee->employeePersonalInfo->current_position_joining_date)) {
-            $employee->employeePersonalInfo->current_position_joining_date = date('d F, Y',
-                strtotime($employee->employeePersonalInfo->current_position_joining_date));
+            $employee->employeePersonalInfo->current_position_joining_date = date(
+                'd F, Y',
+                strtotime($employee->employeePersonalInfo->current_position_joining_date)
+            );
         }
 
         if (!empty($employee->employeePersonalInfo->current_position_expire_date)) {
-            $employee->employeePersonalInfo->current_position_expire_date = date('d F, Y',
-                strtotime($employee->employeePersonalInfo->current_position_expire_date));
+            $employee->employeePersonalInfo->current_position_expire_date = date(
+                'd F, Y',
+                strtotime($employee->employeePersonalInfo->current_position_expire_date)
+            );
         }
 
         if (!empty($employee->employeePersonalInfo->job_joining_date)) {
-            $employee->employeePersonalInfo->job_joining_date = date('d F, Y',
-                strtotime($employee->employeePersonalInfo->job_joining_date));
+            $employee->employeePersonalInfo->job_joining_date = date(
+                'd F, Y',
+                strtotime($employee->employeePersonalInfo->job_joining_date)
+            );
         }
 
         if (!empty($employee->employeePersonalInfo->house_eligibility_date)) {
-            $employee->employeePersonalInfo->house_eligibility_date = date('d F, Y',
-                strtotime($employee->employeePersonalInfo->house_eligibility_date));
+            $employee->employeePersonalInfo->house_eligibility_date = date(
+                'd F, Y',
+                strtotime($employee->employeePersonalInfo->house_eligibility_date)
+            );
         }
 
         $photoUrl = (!empty($employee->photo)) ? 'employee-profile/' . $employee->photo : 'employee-profile/default.png';
@@ -207,11 +221,22 @@ class EmployeeController extends Controller
         $employeeReligions = $this->employeeReligionService->dropDown();
 
         return view('hrm::employee.edit', compact(
-            'employeeDepartments', 'employeeDesignations',
-            'employee', 'institutes', 'academicDepartments', 'academicDegree',
-            'academicDurations', 'employeeTitles', 'employeeTrainingDuration',
-            'employeeSalaryScale', 'photoUrl', 'sections', 'employeeSpouses',
-            'employeeChildren', 'employeeReligions', 'areaOfInterests'
+            'employeeDepartments',
+            'employeeDesignations',
+            'employee',
+            'institutes',
+            'academicDepartments',
+            'academicDegree',
+            'academicDurations',
+            'employeeTitles',
+            'employeeTrainingDuration',
+            'employeeSalaryScale',
+            'photoUrl',
+            'sections',
+            'employeeSpouses',
+            'employeeChildren',
+            'employeeReligions',
+            'areaOfInterests'
         ));
     }
 
@@ -221,7 +246,7 @@ class EmployeeController extends Controller
         Session::flash('message', $response->getContent());
         $employee_id = $response->getId();
 
-        return redirect('/hrm/employee/' . $employee_id);
+        return redirect()->route('employee.show', $employee_id);
     }
 
     public function dateDifference($date)
@@ -279,23 +304,24 @@ class EmployeeController extends Controller
     {
         $employeeList = $this->employeeService->getEmployeeList();
         return view('hrm::employee.personal_information_index', compact('employeeList'));
-
     }
-/**
- * Undocumented function
- *
- * @return void
- */
-    public function importEmployee(){
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function importEmployee()
+    {
         return view('hrm::employee.import_employee');
     }
-/**
- * Undocumented function
- *
- * @param Request $request
- * @return void
- */
-    public function importEmployeeInformationStore(Request $request){
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function importEmployeeInformationStore(Request $request)
+    {
 
         try {
             Excel::import(new ImportEmployee(), request()->file('attachment'));

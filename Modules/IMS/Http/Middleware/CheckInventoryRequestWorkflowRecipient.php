@@ -17,8 +17,7 @@ class CheckInventoryRequestWorkflowRecipient
     public function handle(Request $request, Closure $next)
     {
         $inventoryRequest = $request->inventoryRequest;
-
-        if(!$inventoryRequest->isRecipient()) {
+        if (!$inventoryRequest->isRecipient()) {
             abort(403);
         }
 

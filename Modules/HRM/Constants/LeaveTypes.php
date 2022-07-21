@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: siaminflack
- * Date: 6/25/19
- * Time: 5:57 PM
- */
-
 namespace Modules\HRM\Constants;
 
 

@@ -30,13 +30,6 @@
                 <i class="la la-list-alt"></i> @lang('hrm::employee.religion.title')
             </a>
         </li>
-
-        {{-- <li class="master-aside-menu-item {{ isActive(['circular.index'],'route') }}">
-            <a href="{{ route('circular.index') }}">
-                <i class="la la-list-ol"></i> @lang('hrm::circular.title')
-            </a>
-        </li>
-        
         <li class="master-aside-menu-item dropdown {{isActive(['leave-types.index','leaves.create', 'leaves.index','leave-balances.index'],'route')}}">
             <a href="#" >
                 <i class="la la-edit"></i>
@@ -69,7 +62,7 @@
                         </span>
                     </a>
                 </li>
-                @can('hrm-user-access')
+                
                 <li>
                     <a href="{{ route('leave-types.index') }}" class="{{isActive(['leave-types.index'],'route')}}">
                         <i class="la la-user"></i>
@@ -78,10 +71,17 @@
                         </span>
                     </a>
                 </li>
-                @endcan
+                
                 
             </ul>
         </li>
+        {{-- <li class="master-aside-menu-item {{ isActive(['circular.index'],'route') }}">
+            <a href="{{ route('circular.index') }}">
+                <i class="la la-list-ol"></i> @lang('hrm::circular.title')
+            </a>
+        </li>
+        
+        
 
 
         <li class="master-aside-menu-item dropdown {{isActive(['appraisals.settings.create','appraisals.settings.index'],'route')}}">
