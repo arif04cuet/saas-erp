@@ -10,68 +10,74 @@ use Modules\HRM\Http\Requests\StoreDepartmentRequest;
 use Modules\HRM\Services\DepartmentService;
 use Modules\HRM\Services\EmployeeService;
 
-class DepartmentController extends Controller {
+class DepartmentController extends Controller
+{
 
 	protected $departmentService;
 	private $employeeService;
 
-	public function __construct(DepartmentService $departmentService, EmployeeService $employeeService ) {
-	    $this->employeeService = $employeeService;
+	public function __construct(DepartmentService $departmentService, EmployeeService $employeeService)
+	{
+		$this->employeeService = $employeeService;
 		$this->departmentService = $departmentService;
 	}
 
-	public function index() {
+	public function index()
+	{
 		$departmentList = $this->departmentService->getDepartmentList();
 
-		return view( 'hrm::department.index', compact( 'departmentList' ) );
+		return view('hrm::department.index', compact('departmentList'));
 	}
 
 
-	public function create() {
-        $employees = $this->employeeService->getEmployeesForDropdown();
-		return view( 'hrm::department.create', compact('employees') );
+	public function create()
+	{
+		$employees = $this->employeeService->getEmployeesForDropdown();
+		return view('hrm::department.create', compact('employees'));
 	}
 
 
-	public function store( StoreDepartmentRequest $request ) {
-		$response = $this->departmentService->storeDepartment( $request->all() );
-		Session::flash( 'message', $response->getContent() );
+	public function store(StoreDepartmentRequest $request)
+	{
+		$response = $this->departmentService->storeDepartment($request->all());
+		Session::flash('message', $response->getContent());
 
-		return redirect()->route( 'department.index' );
-
+		return redirect()->route('department.index');
 	}
 
 
-	public function show( $id ) {
-		$department = $this->departmentService->getDepartmentById( $id );
-        $departmentHead = $this->employeeService->getDivisionalDirectorByDepartmentId($id);
+	public function show($id)
+	{
+		$department = $this->departmentService->getDepartmentById($id);
+		$departmentHead = $this->employeeService->getDivisionalDirectorByDepartmentId($id);
 
-		return view( 'hrm::department.show', compact( 'department', 'departmentHead' ) );
+		return view('hrm::department.show', compact('department', 'departmentHead'));
 	}
 
 
-	public function edit( $id ) {
-		$department = $this->departmentService->getDepartmentById( $id );
-        $employees = $this->employeeService->getEmployeesForDropdown();
-        $departmentHead = $this->employeeService->getDivisionalDirectorByDepartmentId($id);
-        $departmentHeadId = (!is_null($departmentHead))? $departmentHead->id : null;
-		return view( 'hrm::department.edit', compact( 'department', 'employees', 'departmentHeadId') );
-
+	public function edit($id)
+	{
+		$department = $this->departmentService->getDepartmentById($id);
+		$employees = $this->employeeService->getEmployeesForDropdown();
+		$departmentHead = $this->employeeService->getDivisionalDirectorByDepartmentId($id);
+		$departmentHeadId = (!is_null($departmentHead)) ? $departmentHead->id : null;
+		return view('hrm::department.edit', compact('department', 'employees', 'departmentHeadId'));
 	}
 
 
-	public function update( StoreDepartmentRequest $request, $id ) {
-		$response = $this->departmentService->updateDepartment( $request->all(), $id );
-		Session::flash( 'message', $response->getContent() );
+	public function update(StoreDepartmentRequest $request, $id)
+	{
+		$response = $this->departmentService->updateDepartment($request->all(), $id);
+		Session::flash('message', $response->getContent());
 
-		return redirect()->route( 'department.edit', $response->getId() );
+		return redirect()->route('department.edit', $response->getId());
 	}
 
-	public function destroy($id) {
+	public function destroy($id)
+	{
 		$response = $this->departmentService->deleteDepartment($id);
-		Session::flash( 'message', $response->getContent() );
+		Session::flash('message', $response->getContent());
 
-		return redirect()->route( 'department.index' );
-
+		return redirect()->route('department.index');
 	}
 }

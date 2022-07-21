@@ -19,7 +19,6 @@ class DoptorAbleScope implements Scope
     public function apply(Builder $builder, Model $model)
     {
         logger(doptor('id'));
-
         if ($id = doptor('id'))
             $builder->where('doptor_id', $id);
     }

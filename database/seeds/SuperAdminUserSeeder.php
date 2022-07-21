@@ -25,7 +25,7 @@ class SuperAdminUserSeeder extends Seeder
             'created_at' => '2020-02-25 16:35:02',
             'updated_at' => '2020-02-25 16:35:02',
             'username' => 'superadmin',
-            'user_type' => 'Employee',
+            'user_type' => 'User',
             'mobile' => '01732609096',
             'reference_table_id' => 1,
             'status' => 'Active',
