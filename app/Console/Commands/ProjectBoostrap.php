@@ -35,5 +35,6 @@ class ProjectBoostrap extends Command
         $this->info('Importing Doptors - done');
         $this->call('db:seed', ['class' => 'ImportModulesSeeder']);
         $this->info('Importing Modules - done');
+        $this->call('db:seed', ['class' => 'LeaveTypesTableSeeder']);
     }
 }

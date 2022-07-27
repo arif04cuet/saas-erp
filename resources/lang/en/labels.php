@@ -118,7 +118,7 @@ return [
     'Accounts' => 'Accounts',
     'Cafeteria' => 'Cafeteria',
     'HM' => 'HM',
-    'HRM' => 'Employee Management',
+    'HRM' => 'Human Resource Management',
     'IMS' => 'IMS',
     'PMS' => 'PMS',
     'RMS' => 'RMS',
