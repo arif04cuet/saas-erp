@@ -1,6 +1,3 @@
-# RDCD ERP
-SaaS based ERP Project for RDCD
+# Simple SaaS ERP
 
-## Package Details
-
-- [Nicolas Widart - Laravel Module](https://github.com/nWidart/laravel-modules)
+Simple custom ERP with 11 modules. Accounts, Cafeteria, Hostel, HRM, Inventory, Project Management, Resource Management, Training Management, Vehicle, Medical, Publication Management.
